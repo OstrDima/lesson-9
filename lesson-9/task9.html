@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript AJAX</title>
+	<script src="task9.js"></script>
+</head>
+
+<body>
+	<h1>AJAX methods</h1>
+	<form>
+		<input id="Surname" type="text" placeholder="Прізвище" onkeyup="check()"><br><br>
+		<input id="Name" type="text" placeholder="Ім'я" onkeyup="check()"><br><br>
+		<input id="Age" type="text" placeholder="Вік" onkeyup="check()" onblur="validateAge()"><br><br>
+		<input id="Address" type="text" placeholder="Місце проживання" onkeyup="check()"><br>
+		<p id="Message">Для відправлення форми необхідно коректно заповнити всі поля!</p>
+		<input id="AjaxGET" type="button" value="Ajax GET" onclick="sendDataByGetMethod()" disabled>
+		<input id="AjaxPOST" type="button" value="Ajax POST" onclick="sendDataByPostMethod()" disabled>
+		<input type="button" value="Clear Fields" onclick="clearFields()">
+	</form>
+
+	<style>
+	.error { border-color: red }
+	</style>
+</body>
+</html>
